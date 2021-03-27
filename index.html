@@ -2,51 +2,48 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/searchbar_1.css">
+    <link rel="stylesheet" href="css/swiper_1.css">
+    <link rel="stylesheet" href="css/neu_1.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="js/variables.js" charset="utf-8"> </script>
+    <script src="js/neu_1.js" charset="utf-8"> </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
     <link  href="https://unpkg.com/swiper/swiper-bundle.css" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" >
-
-<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <title>CSS Element Generator</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" >
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>UI Generator</title>
   </head>
   <body>
     <div class="bd">
 
       <nav class="navbar">
-      <div class="heading"><a href="index.html" class="head">CSS Element Generator</a></div>
+      <div class="heading"><a href="index.html" class="head">UI Generator</a></div>
       </nav>
       <section class="main">
         <div class="menu">
           <div class="sidenav">
-            <button class="dropdown-btn" onclick="fvar1()" >Dropdown</button>
+            <button class="dropdown-btn">Search Bars</button>
             <div class="dropdown-container">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <button class="link" onclick="fvar1()" >Search Bar 1 </button>
             </div>
-            <button class="dropdown-btn" onclick="fvar2()">Dropdown</button>
+            <button class="dropdown-btn">Swipers</button>
             <div class="dropdown-container">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <button class="link" onclick="fvar2()">Swiper 1</button>
             </div>
-            <button class="dropdown-btn">Dropdown</button>
+            <button class="dropdown-btn">Glassmorphism</button>
             <div class="dropdown-container">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+
             </div>
-            <button class="dropdown-btn">Dropdown</button>
+            <button class="dropdown-btn">Neumorphism</button>
             <div class="dropdown-container">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <button class="link" onclick="fvar3()">Neumorphism 1</button>
+
             </div>
           </div>
         </div>
@@ -80,6 +77,6 @@
       </div>
       </section>
   </div>
-  <script src="index.js" charset="utf-8"> </script>
+  <script src="js/index.js" charset="utf-8"> </script>
   </body>
 </html>
