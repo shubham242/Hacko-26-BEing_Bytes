@@ -6,6 +6,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>CSS Element Generator</title>
   </head>
   <body>
@@ -46,17 +53,28 @@
         <div class="container">
 
           <div class="display">
+            <div class="canvas" id="canvas">
 
+            </div>
           </div>
           <div class="code">
             <div class="html">
               <h2>HTML</h2>
+              <div class="code-area">
+              <pre></pre>
+              </div>
             </div>
             <div class="css">
               <h2>CSS</h2>
+              <div class="code-area">
+              <pre></pre>
+              </div>
             </div>
             <div class="javascript">
               <h2>JavaScript</h2>
+              <div class="code-area">
+              <pre></pre>
+              </div>
             </div>
         </div>
       </div>

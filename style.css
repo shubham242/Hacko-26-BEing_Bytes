@@ -80,6 +80,8 @@ body{
   text-align: left;
   cursor: pointer;
   outline: none;
+  background: rgba(105, 48, 195, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* On mouse-over */
@@ -89,9 +91,9 @@ body{
 
 
 /* Add an active class to the active dropdown button */
-.dropdown-active {
+/* .dropdown-active {
 
-}
+} */
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
@@ -111,6 +113,28 @@ body{
   flex: 1;
   border-bottom: solid;
   border-color: grey;
+
+}
+
+/* Display */
+
+.canvas{
+  display: block;
+  width: 90%;
+  height: 90%;
+  top: auto;
+  left: auto;
+  margin: 20px auto;
+  background-color: white;
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .code{
@@ -125,7 +149,6 @@ h2{
   color: grey;
   background: rgba( 249, 238, 249, 0.30 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 9.0px );
   -webkit-backdrop-filter: blur( 9.0px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -134,6 +157,8 @@ h2{
   flex: 1;
   border-right: solid ;
   border-color: grey;
+  width: 100%;
+  height: 100%;
 
 }
 .css{
@@ -144,3 +169,237 @@ h2{
 .javascript{
   flex: 1;
 }
+
+.code-area{
+  display: block;
+  width: 100%;
+  height: 260px;
+  background-color: white;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  margin-top: 5px;
+
+}
+
+code {
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+code:before{
+    -webkit-user-select: none;
+    counter-increment: line;
+    content: counter(line);
+}
+
+pre {
+  width: 100%;
+  max-width: 370px;
+  height: 100%;
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 1em;
+    counter-reset: line;
+}
+pre span {
+  display: block;
+  line-height: 1.5rem;
+}
+pre span:before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  padding: 0 .5em;
+  margin-right: .5em;
+  color: #888
+}
+
+
+
+
+
+
+
+
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1920 - 320));
+}
+
+.searchbtn, .search-btn, .input {
+	font: 1em Hind, sans-serif;
+	line-height: 1.5em;
+}
+.searchbtn, .input {
+	color: #171717;
+}
+.searchbtn, .search-bar {
+	display: flex;
+}
+.searchbtn {
+	background: #f1f1f1;
+  top: 50%;
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+.search-bar input,
+.search-btn,
+.search-btn:before,
+.search-btn:after {
+	transition: all 0.25s ease-out;
+}
+.search-bar input,
+.search-btn {
+	width: 3em;
+	height: 3em;
+}
+.search-bar input:invalid:not(:focus),
+.search-btn {
+	cursor: pointer;
+}
+.search-bar,
+.search-bar input:focus,
+.search-bar input:valid  {
+	width: 100%;
+}
+.search-bar input:focus,
+.search-bar input:not(:focus) + .search-btn:focus {
+	outline: transparent;
+}
+.search-bar {
+	margin: auto;
+	padding: 1.5em;
+	justify-content: center;
+	max-width: 30em;
+}
+.search-bar input {
+	background: transparent;
+	border-radius: 1.5em;
+	box-shadow: 0 0 0 0.4em #171717 inset;
+	padding: 0.75em;
+	transform: translate(0.5em,0.5em) scale(0.5);
+	transform-origin: 100% 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.search-bar input::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+.search-bar input:focus,
+.search-bar input:valid {
+	background: #fff;
+	border-radius: 0.375em 0 0 0.375em;
+	box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+	transform: scale(1);
+}
+.search-btn {
+	background: #171717;
+	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+	padding: 0.75em;
+	position: relative;
+	transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
+	transform-origin: 0 50%;
+}
+.search-btn:before,
+.search-btn:after {
+	content: "";
+	display: block;
+	opacity: 0;
+	position: absolute;
+}
+.search-btn:before {
+	border-radius: 50%;
+	box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+	top: 0.75em;
+	left: 0.75em;
+	width: 1.2em;
+	height: 1.2em;
+}
+.search-btn:after {
+	background: #f1f1f1;
+	border-radius: 0 0.25em 0.25em 0;
+	top: 51%;
+	left: 51%;
+	width: 0.75em;
+	height: 0.25em;
+	transform: translate(0.2em,0) rotate(45deg);
+	transform-origin: 0 50%;
+}
+.search-btn span {
+	display: inline-block;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+}
+
+/* Active state */
+.search-bar input:focus + .search-btn,
+.search-bar input:valid + .search-btn {
+	background: #2762f3;
+	border-radius: 0 0.375em 0.375em 0;
+	transform: scale(1);
+}
+.search-bar input:focus + .search-btn:before,
+.search-bar input:focus + .search-btn:after,
+.search-bar input:valid + .search-btn:before,
+.search-bar input:valid + .search-btn:after {
+	opacity: 1;
+}
+.search-bar input:focus + .search-btn:hover,
+.search-bar input:valid + .search-btn:hover,
+.search-bar input:valid:not(:focus) + .search-btn:focus {
+	background: #0c48db;
+}
+.search-bar input:focus + .search-btn:active,
+.search-bar input:valid + .search-btn:active {
+	transform: translateY(1px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.swiper-container {
+	width: 480px;
+  align-items: center;
+
+}
+
+.swiper-slide {
+	width: 240px;
+	height: 240px;
+	padding: 5px;
+  margin: auto;
+}
+.swiper-content img{
+  max-width:240px;
+  max-height:240px;
+  margin: auto;
+}
+
+.swiper-content {
+	background-color: #fff;
+	width: 240px;
+	height: 240px;
+  margin: auto;
+	}
+  .swiper-pagination{
+    left: 48%;
+  }
